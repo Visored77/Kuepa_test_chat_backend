@@ -8,8 +8,8 @@ const servidor=http.createServer(app2);
 const socketio = require('socket.io');
 const io = require("socket.io")(servidor, {
     cors: {
-      //origin: "http://localhost:3001",
-      origin: "https://frontkuepa.herokuapp.com/",
+      origin: "http://localhost:3001",
+      //origin: "https://frontkuepa.herokuapp.com/",
       methods: ["GET", "POST"]
     }
   });
