@@ -20,7 +20,7 @@ const home=async(req,res )=>{
 const getUsers = async (req, res)=>{
    //res.send("correindo api")
    const response = await pool.query('SELECT * FROM users');
-   //res.header("Access-Control-Allow-Origin", "*");
+   res.header("Access-Control-Allow-Origin", "*");
    res.status(200).json(response.rows);
    
 }
