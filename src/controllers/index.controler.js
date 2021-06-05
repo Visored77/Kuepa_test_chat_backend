@@ -8,7 +8,9 @@ const pool= new Pool({
     //database: 'api',
     //port: '5432'
     connectionString: process.env.DATABASE_URL,
-    ssl: true
+    ssl: {
+        rejectUnauthorized: false
+        }
     //host: 'ec2-18-214-195-34.compute-1.amazonaws.com',
     //user: 'xgtexhsrktxzzp',
     //password: '0cd8e66e96f31508cbcb09004a958f54dca79bc6d5d5142e14a1d4689ae13d29',
