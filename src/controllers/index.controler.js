@@ -14,10 +14,14 @@ const pool= new Pool({
     port: '5432'
 
 })
+const home=async(req,res )=>{
+    res.send("BIENVENIDO A API KUAP")
+}
 const getUsers = async (req, res)=>{
    const response = await pool.query('SELECT * FROM users');
    res.header("Access-Control-Allow-Origin", "*");
    res.status(200).json(response.rows);
+   
 }
 
 const getUserById = async (req, res)=>{
@@ -49,6 +53,7 @@ res.json({
 })
 };
 module.exports= {
+    home,
     getUsers,
     getUserById,
     createuser,
