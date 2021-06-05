@@ -19,7 +19,7 @@ para la administracion de usuarios se puede directamnete desde la base de datos,
 
 ## Para creacion de usuarios:
 
-POST: http://localhost:3000/users con un body tipo:
+`POST: http://localhost:3000/users` con un body tipo:
 `{
     "name": "Daniel",
     "email": "daniel@gmail.com",
