@@ -2,23 +2,23 @@
 
 const {Poll, Pool} = require('pg');
 const pool= new Pool({
-    host: 'localhost',
-    user: 'postgres',
-    password: 'amylee777',
-    database: 'api',
-    port: '5432'
-    //host: 'ec2-18-214-195-34.compute-1.amazonaws.com',
-    //user: 'xgtexhsrktxzzp',
-    //password: '0cd8e66e96f31508cbcb09004a958f54dca79bc6d5d5142e14a1d4689ae13d29',
-    //database: 'dfpuvnguqo410u',
+    //host: 'localhost',
+    //user: 'postgres',
+    //password: 'amylee777',
+    //database: 'api',
     //port: '5432'
+    host: 'ec2-18-214-195-34.compute-1.amazonaws.com',
+    user: 'xgtexhsrktxzzp',
+    password: '0cd8e66e96f31508cbcb09004a958f54dca79bc6d5d5142e14a1d4689ae13d29',
+    database: 'dfpuvnguqo410u',
+    port: '5432'
 
 })
 const home=async(req,res )=>{
     res.send("BIENVENIDO A API KUAP")
 }
 const getUsers = async (req, res)=>{
-   res.send("correindo api")
+   //res.send("correindo api")
    const response = await pool.query('SELECT * FROM users');
    res.header("Access-Control-Allow-Origin", "*");
    res.status(200).json(response.rows);
