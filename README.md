@@ -17,7 +17,8 @@ para visualizar los datos de la base de datos se puede ingresar a `localhost:300
 
 para la administracion de usuarios se puede directamnete desde la base de datos, o utilizando la api por medio de Postman haciendo peticiones tales como:
 
-#Para creacion de usuarios:
+##Para creacion de usuarios:
+
 POST: http://localhost:3000/users con un body tipo:
 `{
     "name": "Daniel",
@@ -25,10 +26,11 @@ POST: http://localhost:3000/users con un body tipo:
     "password": "12345"
 }`
 
-# Consulta de Usuarios
+## Consulta de Usuarios
 `GET: http://localhost:3000/users`
 
-# Eliminar Usuarios
+## Eliminar Usuarios
 `DELETE: http://localhost:3000/users/"id del usuario a eliminar"`
+
 
 
